@@ -1,106 +1,73 @@
 /* MovieCard.module.css */
 .card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  }
-  
-  .poster {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .year {
-    color: #777;
-    margin-bottom: 10px;
-  }
-  
-  .buttonGroup {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: auto; /* Push buttons to the bottom */
-    margin-bottom: 20px; /* Ensure space at the bottom */
-  }
-  
-  .favoriteButton,
-  .moreInfoButton,
-  .removeButton {
-    padding: 6px 12px; /* Smaller padding for smaller buttons */
-    border-radius: 20px; /* Slightly rounded */
-    font-size: 14px; /* Smaller font size */
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
-    text-align: center;
-  }
-  
-  .favoriteButton {
-    background-color: #ff6347;
-    color: white;
-  }
-  
-  .favoriteButton:hover {
-    background-color: #e5533f;
-  }
-  
-  .favoriteButton:active {
-    background-color: #d94b37;
-  }
-  
-  .moreInfoButton {
-    background-color: #4caf50;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .moreInfoButton:hover {
-    background-color: #45a049;
-  }
-  
-  .moreInfoButton:active {
-    background-color: #3f8e42;
-  }
-  
-  .removeButton {
-    background-color: #e53935; /* A more refined red for remove button */
-    color: white;
-    padding: 6px 12px; /* Keep button size consistent */
-    border-radius: 20px; /* Consistent with other buttons */
-    font-size: 14px; /* Consistent with other buttons */
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
-  }
-  
-  .removeButton:hover {
-    background-color: #d32f2f; /* Slightly darker red on hover */
-  }
-  
-  .removeButton:active {
-    background-color: #c62828; /* Dark red when pressed */
-  }
-  
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.year {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.favoriteButton, .moreInfoButton {
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.favoriteButton {
+  background-color: #ffcc00;
+  color: #fff;
+}
+
+.favoriteButton:hover {
+  background-color: #e6b800;
+}
+
+.moreInfoButton {
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+}
+
+.moreInfoButton:hover {
+  background-color: #45a049;
+}
+
+/* Error Message for Movie Not Found */
+.errorMessage {
+  color: #e53935;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.noMovies {
+  font-size: 20px;
+  color: #777;
+  text-align: center;
+  grid-column: span 2;
+}
